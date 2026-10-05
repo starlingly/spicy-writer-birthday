@@ -30,13 +30,21 @@ h1 .one{color:var(--gold)}
 .media img{width:100%;height:auto;border-radius:10px;display:block;margin:6px 0 10px}
 .medialink{display:inline-block;font-size:.9rem;color:var(--fg);opacity:.85;text-decoration:underline;margin:0 0 10px}
 footer{font-style:italic;text-align:right;font-size:.95rem;opacity:.9}
+.fh{text-align:center;font-weight:normal;font-size:1.6rem;margin:10px 16px 18px;color:var(--gold)}
+.founders{max-width:820px;margin:0 auto;padding:0 16px 30px}
+.card.founder{--tilt:0deg;padding:30px 30px 20px}
+.card.founder .msg{font-size:1.12rem}
 .end{text-align:center;padding:10px 16px 50px;opacity:.75;font-size:.95rem}
 .end a{color:var(--gold)}
 .confetti{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
 .confetti i{position:absolute;top:-10px;width:8px;height:14px;background:var(--gold);opacity:.8;animation:fall linear infinite}
 .confetti i:nth-child(odd){background:var(--chili);border-radius:50%}
 @keyframes fall{to{transform:translateY(110vh) rotate(720deg)}}
-.hero,.board,h1,.sub,.count,.end{position:relative;z-index:1}
+.hero,.board,h1,.sub,.count,.fh{text-align:center;font-weight:normal;font-size:1.6rem;margin:10px 16px 18px;color:var(--gold)}
+.founders{max-width:820px;margin:0 auto;padding:0 16px 30px}
+.card.founder{--tilt:0deg;padding:30px 30px 20px}
+.card.founder .msg{font-size:1.12rem}
+.end{position:relative;z-index:1}
 </style>
 </head>
 <body>
@@ -44,7 +52,7 @@ footer{font-style:italic;text-align:right;font-size:.95rem;opacity:.9}
 <div class="hero"><img src="banner.png" alt="A birthday cake nestled in a pile of red chili peppers"></div>
 <h1>Happy <span class="one">1st</span> Birthday, Spicy Writer 🌶️</h1>
 <p class="sub">Notes for Horselock &amp; Billy, from the people who write here.</p>
-<p class="count">15 notes · October 2026</p>
+<p class="count">16 notes · October 2026</p>
 <main class="board">
 
 <article class="card" style="--bg:#b3261e;--fg:#fff8f0;--sub:rgba(255,248,240,.82)">
@@ -138,6 +146,13 @@ footer{font-style:italic;text-align:right;font-size:.95rem;opacity:.9}
   <footer>— FuturaDiego</footer>
 </article>
 </main>
+<h2 class="fh">From the founders</h2><section class="founders">
+<article class="card founder" style="--bg:#6b2d5c;--fg:#fff8f0;--sub:rgba(255,248,240,.82)">
+  <p class="msg">Thank you so much.<br><br>Billy here.<br><br>When we launched Spicy Writer, I was just a Java developer who knew next to nothing about jailbreaking, didn&#x27;t know what &quot;gooning&quot; meant, and had never used AI for writing before. I just happened to be married to the biggest !@#$ing brain on the planet, the great jailbreaking genius horselockspacepirate.<br><br>So when this project started, I was onboard immediately, helping with the website development, getting my dev shit set up, handling the administrative business creation boring stuff so that horse could knuckle down on development. I jumped on Discord and started to learn about the community, about our users, started talking to people, determined to make myself a part of it. <br><br>I remember when all we had was the barest prototype of the site, with only Nemo in the model dropdown, and only Spicy as a writer. And it wasn&#x27;t live. I remember the testing, the fixing, the early Trello board, the countdown to launch. The chaos of horse&#x27;s reddit account being banned as soon as we got our domain, the hefty GPT 5 restrictions that launched just as we were supposed to, the delay because horse refused to launch with GPT5 completely unbroken. Then, finally, the go-live, the absolute frenzy on Discord. I thought you people were going to start eating each other. <br><br>The first weekend where neither of us did anything but work on the site. Help users with issues. Take bug reports. Fix bugs. Fix stability issues. Me, on Discord, talking to everyone, giving updates. And just feeling like finally, I was doing work that actually mattered. I felt like a real software engineer, working on a project people loved, getting feedback directly from our users and making the site better and hearing someone actually say thank you and mean it. <br><br>For months we watched the place grow. And grow. And grow. I have become the biggest Opus addict of you all, i guarantee it. Many feature ideas and enhancements have come from the fact that I use this site constantly. And thanks to all of you, horse and I were both eventually able to quit both of our jobs, making SW our only job for a while now. <br><br>The hours are not shorter. There&#x27;s no true vacation - we both have our laptops with us even now as I&#x27;m typing this from a resort in Hawaii, and in fact, we had a MAJOR outage immediately after we arrived -  but the work is so much more rewarding, so much more meaningful, and we enjoy every minute of it. You gooners have changed our lives, and we love every single one of you. Thank you. Thank you so much</p>
+  <div class="love"><span class="lovelabel">what I love about SW</span>First, all of you gooners. Our users, our community, we&#x27;d be nothing without you guys. <br><br>Second, I looooooove Opus / Indigo.</div>
+  
+  <footer>— Billy</footer>
+</article></section>
 <p class="end">Made with love by the Spicy Writer community. Blow out the candles, you two.</p>
 </body>
 </html>

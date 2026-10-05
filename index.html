@@ -17,8 +17,9 @@ h1{font-size:clamp(2rem,6vw,3.6rem);margin:28px 16px 6px;text-align:center;lette
 h1 .one{color:var(--gold)}
 .sub{text-align:center;margin:0 16px 8px;font-size:1.15rem;opacity:.9}
 .count{text-align:center;margin:0 16px 36px;font-size:.95rem;opacity:.65;font-style:italic}
-.board{max-width:1100px;margin:0 auto;padding:0 16px 60px;columns:3 290px;column-gap:18px;column-fill:balance}
-.card{break-inside:avoid;display:inline-block;width:100%;background:var(--bg);color:var(--fg);border-radius:16px;padding:22px 22px 16px;margin:0 0 18px;
+.board{max-width:1100px;margin:0 auto;padding:0 16px 60px;display:flex;gap:18px;align-items:flex-start;justify-content:center}
+.col{flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:18px}
+.card{background:var(--bg);color:var(--fg);border-radius:16px;padding:22px 22px 16px;margin:0;
  box-shadow:0 10px 30px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.12);position:relative;transform:rotate(var(--tilt,0deg));
  transition:transform .25s ease}
 .card:hover{transform:rotate(0) translateY(-3px)}
@@ -150,5 +151,23 @@ footer{font-style:italic;text-align:right;font-size:.95rem;opacity:.9}
   <footer>— Billy</footer>
 </article></section>
 <p class="end">Made with love by the Spicy Writer community. Blow out the candles, you two.</p>
+<script>
+(function(){
+  var board=document.querySelector('.board');
+  var cards=Array.prototype.slice.call(board.querySelectorAll('.card'));
+  function layout(){
+    var w=board.clientWidth, n=w>=900?3:(w>=600?2:1);
+    board.innerHTML='';
+    var cols=[];for(var i=0;i<n;i++){var c=document.createElement('div');c.className='col';board.appendChild(c);cols.push(c);}
+    cards.forEach(function(card){
+      var best=cols[0];cols.forEach(function(c){if(c.offsetHeight<best.offsetHeight)best=c;});
+      best.appendChild(card);
+    });
+  }
+  layout();
+  var t;window.addEventListener('resize',function(){clearTimeout(t);t=setTimeout(layout,120);});
+  Array.prototype.forEach.call(board.querySelectorAll('img'),function(img){img.addEventListener('load',layout);});
+})();
+</script>
 </body>
 </html>
